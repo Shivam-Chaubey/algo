@@ -1,5 +1,7 @@
 package sorting;
 
+import java.util.Arrays;
+
 public class CommonUtility {
     public static void swap(int[] arr, int i, int j){
         int temp = arr[i];
@@ -13,5 +15,9 @@ public class CommonUtility {
             arr[i] = (int)(Math.random()*100);
         }
         return arr;
+    }
+
+    public static void printArray(int[] arr){
+        System.out.println(Arrays.toString(arr));
     }
 }
