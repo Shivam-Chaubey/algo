@@ -1,7 +1,5 @@
 package sorting;
 
-import java.util.Arrays;
-
 public class SelectionSort extends CommonUtility{
     public static void main(String[] args) {
         int[] arr = generateRandomArray(10);
