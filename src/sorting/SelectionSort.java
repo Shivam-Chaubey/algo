@@ -7,8 +7,8 @@ public class SelectionSort extends CommonUtility{
         int[] arr = generateRandomArray(10);
         int[] resultIDE = selectionSortIDE(arr);
         int[] resultSelf = selectionSortSelf(arr);
-        System.out.println(Arrays.toString(resultIDE));
-        System.out.println(Arrays.toString(resultSelf));
+        printArray(resultIDE);
+        printArray(resultSelf);
     }
 
     public static int[] selectionSortSelf(int[] arr) {
