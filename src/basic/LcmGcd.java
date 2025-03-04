@@ -10,6 +10,7 @@ public class LcmGcd {
         System.out.println(a + " " + b + " " + gcdBruteForce(a, b));
         System.out.println(a + " " + b + " " + gcdBetterApproach(b, a));
         System.out.println(a + " " + b + " " + gcdIDE(a, b));
+        System.out.println(a + " " + b + " " + gcdEuclideanAlgorithm(20, 15));
     }
 
     private static int gcdBruteForce(int a, int b){
@@ -29,6 +30,13 @@ public class LcmGcd {
             }
         }
         return 1;
+    }
+
+    private static int gcdEuclideanAlgorithm(int a, int b){
+        if (b == 0) {
+            return a;
+        }
+        return gcdEuclideanAlgorithm(b, a % b);
     }
 
     private static int gcdIDE(int a, int b) {
