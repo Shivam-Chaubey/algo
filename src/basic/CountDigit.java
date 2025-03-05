@@ -9,6 +9,7 @@ public class CountDigit {
         System.out.println(N);
         System.out.println(countDigitsBruteforce(N));
         System.out.println(countDigitsOptimal(N));
+        System.out.println(countDigitsOptimal2(N));
     }
 
     private static int countDigitsBruteforce(int n) {
@@ -22,5 +23,9 @@ public class CountDigit {
 
     private static int countDigitsOptimal(int n) {
         return (int) Math.log10(n) + 1;
+    }
+
+    private static int countDigitsOptimal2(int n) {
+        return String.valueOf(n).length();
     }
 }
