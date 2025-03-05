@@ -24,7 +24,8 @@ public class ArmstrongNumber {
     }
 
     private static boolean isArmstrongOptimized(int number) {
-        int digits = (int) Math.log10(number) + 1;
+//        int digits = (int) Math.log10(number) + 1;
+        int digits = String.valueOf(number).length();
         int temp = number;
         int res = 0;
         while (number > 0){
