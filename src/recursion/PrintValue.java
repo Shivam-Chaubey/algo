@@ -8,10 +8,10 @@ public class PrintValue {
     static int val = 1;
     private static void printGfg(int N) {
         // code here
-        while(val <= N){
-            System.out.print("GFG" + " ");
-            val++;
-            printGfg(N);
-        }
+        if(val>N)
+            return;
+        System.out.print("GFG ");
+        val++;
+        printGfg(N);
     }
 }
