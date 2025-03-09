@@ -27,7 +27,7 @@ public class CheckPrime {
         if (n == 2) return true; // 2 is the only even prime number
         if (n % 2 == 0) return false; // Even numbers (except 2) are not prime
 
-        for (int i = 3; i * i <= n; i += 2) { // Check only odd numbers up to sqrt(num)
+        for (int i = 3; i <= Math.sqrt(n); i += 2) { // Check only odd numbers up to sqrt(num)
             if (n % i == 0) {
                 return false;
             }
