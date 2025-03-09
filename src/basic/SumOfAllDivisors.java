@@ -1,13 +1,18 @@
 package basic;
 
+import java.util.ArrayList;
+
 public class SumOfAllDivisors {
     public static void main(String[] args) {
-        int n = 10;
+        int n = 12;
         System.out.println(sumOfAllDivisors(n));
         System.out.println(sumOfAllDivisorsApproach2(n));
         System.out.println(sumOfAllDivisorsApproach3(n));
         System.out.println(sumOfAllDivisorsSieve(n));
         System.out.println(sumOfAllDivisorsOptimizedHarmonicLemma(n));
+        System.out.println("*******");
+        allDivisorsOptimizedSquareRoot(n);
+        System.out.println(sumOfAllDivisorsHarmonicSquareRoot(n));
     }
     private static int sumOfAllDivisors(int n){
         // Write your code here.
@@ -73,6 +78,30 @@ public class SumOfAllDivisors {
         return sum;
     }
 
+    private static void allDivisorsOptimizedSquareRoot(int n){
+        ArrayList<Integer> divisors = new ArrayList<>();
+        for(int i = 1; i<=Math.sqrt(n); i++){
+            if(n%i == 0){
+                divisors.add(i);
+            }
+            if(i != n/i){
+                divisors.add(n/i);
+            }
+        }
+        System.out.println(divisors);
+    }
 
+    public static int sumOfAllDivisorsHarmonicSquareRoot(int n) {
+        int sum = 0;
+
+        for (int i = 1; i * i <= n; i++) {
+            sum += i * (n / i);  // Contribution from 'i'
+            if (i != n / i) {  // Avoid duplicate counting
+                sum += (n / i) * i;
+            }
+        }
+
+        return sum;
+    }
 
 }
