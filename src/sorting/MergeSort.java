@@ -1,6 +1,8 @@
 package sorting;
 
-public class MergeSort extends CommonUtility{
+import common.CommonUtility;
+
+public class MergeSort extends CommonUtility {
     public static void main(String[] args) {
         int[] arr = generateRandomArray(10);
         printArray(arr);

@@ -1,6 +1,8 @@
 package sorting;
 
-public class ShellSort extends CommonUtility{
+import common.CommonUtility;
+
+public class ShellSort extends CommonUtility {
     public static void main(String[] args) {
         int[] arr = generateRandomArray(20);
         printArray(arr);

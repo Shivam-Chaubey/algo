@@ -1,6 +1,8 @@
 package sorting;
 
-public class SelectionSort extends CommonUtility{
+import common.CommonUtility;
+
+public class SelectionSort extends CommonUtility {
     public static void main(String[] args) {
         int[] arr = generateRandomArray(10);
         int[] resultIDE = selectionSortIDE(arr);

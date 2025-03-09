@@ -1,6 +1,8 @@
 package sorting;
 
-public class InsertionSort extends CommonUtility{
+import common.CommonUtility;
+
+public class InsertionSort extends CommonUtility {
     public static void main(String[] args) {
         int [] arr = generateRandomArray(100);
         printArray(arr);
