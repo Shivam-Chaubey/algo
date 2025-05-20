@@ -8,8 +8,10 @@ public class PalindromeString extends CommonUtility {
         String palindromeString = generatePalindromeString(10);
         System.out.println(inputString);
         System.out.println(checkPalindromeString(inputString));
+        checkPalindromeStringRecursion(inputString.toCharArray(), 0, inputString.length()-1);
         System.out.println(palindromeString);
         System.out.println(checkPalindromeString(palindromeString));
+        checkPalindromeStringRecursion(palindromeString.toCharArray(), 0, palindromeString.length()-1);
     }
 
     private static boolean checkPalindromeString(String inputString) {
@@ -20,5 +22,17 @@ public class PalindromeString extends CommonUtility {
             }
         }
         return true;
+    }
+
+    private static void checkPalindromeStringRecursion(char[] inputStringCharArray, int start, int end){
+        if(start >= end){
+            System.out.println("True");
+            return;
+        }
+        if(inputStringCharArray[start] != inputStringCharArray[end]){
+            System.out.println("False");
+            return;
+        }
+        checkPalindromeStringRecursion(inputStringCharArray, start+1, end-1);
     }
 }
