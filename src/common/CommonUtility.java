@@ -21,6 +21,14 @@ public class CommonUtility {
         return arr;
     }
 
+    public static int[] generateRandomArrayWithinRange(int size, int minVal, int maxVal){
+        int[] arr = new int[size];
+        for(int i=0;i<size;i++){
+            arr[i] = (int) (Math.random() * (maxVal - minVal + 1)) + minVal;
+        }
+        return arr;
+    }
+
     public static void printArray(int[] arr){
         System.out.println(Arrays.toString(arr));
     }
