@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class CommonUtility {
     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    private static final String LOWER_CHARACTERS = "abcdefghijklmnopqrstuvwxyz";
     private static final Random random = new Random();
 
     public static void swap(int[] arr, int i, int j){
@@ -62,5 +63,16 @@ public class CommonUtility {
         }
 
         return new String(result);
+    }
+
+    public static String generateRandomLowerCaseString(int length){
+        StringBuilder sb = new StringBuilder(length);
+
+        for (int i = 0; i < length; i++) {
+            int index = random.nextInt(LOWER_CHARACTERS.length());
+            sb.append(LOWER_CHARACTERS.charAt(index));
+        }
+
+        return sb.toString(); 
     }
 }
