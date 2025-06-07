@@ -44,10 +44,15 @@ public class BubbleSort extends CommonUtility {
 
     private static int[] bubbleSortStriver(int[] unsortedArray){
         for(int i = unsortedArray.length-1; i>=1; i--){
+            int swapped = 0;
             for(int j = 0; j <= i-1; j++){
                 if(unsortedArray[j] > unsortedArray[j+1]){
                     swap(unsortedArray, j, j+1);
+                    swapped = 1;
                 }
+            }
+            if(swapped == 0){
+                break;
             }
         }
         return unsortedArray;
