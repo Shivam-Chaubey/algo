@@ -47,9 +47,8 @@ public class InsertionSort extends CommonUtility {
 
     private static int[] insertionSortStriverForLoop(int [] unsortedArray){
         for(int i = 1; i <= unsortedArray.length -1; i++){
-            for(int j = i; j > 0 ; j--){
-                if(unsortedArray[j-1] > unsortedArray[j])
-                    swap(unsortedArray, j, j-1);
+            for(int j = i; j > 0  && unsortedArray[j-1] > unsortedArray[j]; j--){
+                swap(unsortedArray, j, j-1);
             }
         }
         return unsortedArray;
