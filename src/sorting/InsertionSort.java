@@ -9,6 +9,7 @@ public class InsertionSort extends CommonUtility {
         // printArray(insertionSort(arr));
         // printArray(insertionSortGenerated(arr));
         // printArray(insertionSortStriver(arr));
+        printArray(insertionSortStriver(arr));
         printArray(insertionSortStriverForLoop(arr));
     }
 
