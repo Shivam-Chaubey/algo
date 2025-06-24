@@ -6,11 +6,7 @@ import common.CommonUtility;
 
 public class Array_Easy_4_RemoveDuplicatesFromSortedArray extends CommonUtility {
     public static void main(String[] args) {
-        int[] arr = { 1, 4, 6, 4, 4, 1, 6, 7, 8, 11, 54, 6 };
-        printArray(arr);
-        removeDuplicatesFromSortedArrayBruteForce(arr);
-        printArray(arr);
-        int[] arr1 = { 1, 4, 6, 4, 4, 1, 6, 7, 8, 11, 54, 6 };
+        int[] arr1 = {1, 1, 1, 2, 4, 5, 5, 6, 7, 7, 7, 7, 9, 9, 11, 12, 12, 13, 13, 14, 15, 16};
         printArray(arr1);
         int uniqueElements = removeDuplicatesTwoPointersOptimal(arr1);
         System.out.println(uniqueElements);
@@ -32,8 +28,8 @@ public class Array_Easy_4_RemoveDuplicatesFromSortedArray extends CommonUtility 
         int firstPointer = 0;
         for(int secondPointer = 1; secondPointer < arr.length; secondPointer++){
             if(arr[secondPointer] != arr[firstPointer]){
-                arr[firstPointer+1] = arr[secondPointer];
                 firstPointer++;
+                arr[firstPointer] = arr[secondPointer];
             }
         }
         printArray(arr);
