@@ -27,7 +27,6 @@ public class Pattern_19_Symmetric_Void {
                 System.out.print(" ");
             }
             // for star
-            // for star
             for(int i = 1; i <= row; i++){
                 System.out.print("*");
             }
