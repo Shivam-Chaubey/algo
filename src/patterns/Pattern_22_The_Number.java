@@ -1,0 +1,20 @@
+package patterns;
+
+public class Pattern_22_The_Number {
+    private static void theNumber(int n){
+        for(int i = 0; i <= 2*n-2; i++){
+            for(int j = 0; j <= 2*n-2; j++){
+                int top = i;
+                int left = j;
+                int bottom = (2*n-2)-i;
+                int right = (2*n-2)-j;
+                int minDist = Math.min(Math.min(top, bottom), Math.min(left, right));
+                System.out.print((n - minDist) + " ");
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        theNumber(4);
+    }
+}
