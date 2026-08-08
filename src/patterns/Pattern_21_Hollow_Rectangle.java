@@ -1,6 +1,6 @@
 package patterns;
 
-public class Pattern_20_Hollow_Rectangle {
+public class Pattern_21_Hollow_Rectangle {
     private static void hollowRectangle(int n){
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n; j++){
