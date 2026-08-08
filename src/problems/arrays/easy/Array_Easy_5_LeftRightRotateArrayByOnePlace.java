@@ -2,7 +2,7 @@ package problems.arrays.easy;
 
 import common.CommonUtility;
 
-public class Array_Easy_5_LeftRotateArrayByOnePlace extends CommonUtility{
+public class Array_Easy_5_LeftRightRotateArrayByOnePlace extends CommonUtility{
     public static void main(String[] args) {
         int arr[] = generateRandomArray(10);
         printArray(arr);
@@ -26,7 +26,7 @@ public class Array_Easy_5_LeftRotateArrayByOnePlace extends CommonUtility{
         for(int i = n-2; i >= 0; i--){
             arr[i+1] = arr[i];
         }
-        arr[0]=temp;
+        arr[0] = temp;
         return arr;
     }
 }
